@@ -11,9 +11,9 @@ export const commands=[
  {command:'cancel',description:'Return to the main menu'},
 ];
 
-export function createConversation({catalog,origin,username='Aurevontop27_bot'}){
+export function createConversation({catalog,origin,username='Aurevontop28_bot'}){
  const u=new URL(origin);if(u.protocol!=='https:'||u.origin!==origin)throw new Error('An exact HTTPS store origin is required.');
- if(username!=='Aurevontop27_bot')throw new Error('Unexpected bot identity.');
+ if(username!=='Aurevontop28_bot')throw new Error('Unexpected bot identity.');
  const products=new Map(catalog.map(p=>[p.id,p]));
  const conciergeUrl='https://t.me/aurevon_outlet1';
  const menu={inline_keyboard:[[{text:'Open AUREVON',web_app:{url:origin+'/#home'}}],[{text:'Help me choose',callback_data:'choose'},{text:'This or that',callback_data:'duel:start'}],[{text:'My watch edit',callback_data:'shortlist'}],[{text:'Ask a concierge',url:conciergeUrl},{text:'Help',callback_data:'help'}]]};

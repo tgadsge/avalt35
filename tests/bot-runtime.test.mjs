@@ -14,9 +14,9 @@ const cb=(id,data)=>({update_id:id,callback_query:{id:'callback'+id,from:{id:123
 function temp(){const dir=mkdtempSync(path.join(tmpdir(),'aurevon-queue-'));return {dir,file:path.join(dir,'bot.sqlite'),clean(){rmSync(dir,{recursive:true,force:true})}}}
 
 test('identity and webhook checks never request updates or clear webhook',async()=>{
- const methods=[];await verifyBot(async method=>{methods.push(method);return method==='getMe'?{is_bot:true,username:'Aurevontop27_bot'}:{url:''}});assert.deepEqual(methods,['getMe','getWebhookInfo']);
+ const methods=[];await verifyBot(async method=>{methods.push(method);return method==='getMe'?{is_bot:true,username:'Aurevontop28_bot'}:{url:''}});assert.deepEqual(methods,['getMe','getWebhookInfo']);
  await assert.rejects(verifyBot(async()=>({is_bot:true,username:'AurevonChatBot'})),/identity mismatch/);
- await assert.rejects(verifyBot(async method=>method==='getMe'?{is_bot:true,username:'Aurevontop27_bot'}:{url:'https://existing.example'}),/existing webhook/);
+ await assert.rejects(verifyBot(async method=>method==='getMe'?{is_bot:true,username:'Aurevontop28_bot'}:{url:'https://existing.example'}),/existing webhook/);
  assert.throws(()=>botConfig({}),/disabled/);
  assert.equal(botConfig({AUREVON_BOT_ENABLED:'true',AUREVON_PUBLIC_ORIGIN:'https://store.example'}).dir,'/data');
 });

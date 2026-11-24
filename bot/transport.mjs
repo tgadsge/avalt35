@@ -23,7 +23,7 @@ export function createTelegram(token,{fetchImpl=fetch}={}){
 }
 export async function verifyBot(call){
  const me=await call('getMe');
- if(me?.is_bot!==true||me.username!=='Aurevontop27_bot')throw new Error('Bot identity mismatch. No updates were requested.');
+ if(me?.is_bot!==true||me.username!=='Aurevontop28_bot')throw new Error('Bot identity mismatch. No updates were requested.');
  const webhook=await call('getWebhookInfo');
  if(webhook?.url)throw new Error('An existing webhook is configured. No polling started; do not delete it automatically.');
  return {id:me.id,username:me.username,pendingUpdates:Number(webhook.pending_update_count)||0};
