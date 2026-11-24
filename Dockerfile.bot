@@ -1,0 +1,7 @@
+FROM node:24-bookworm-slim
+WORKDIR /app
+ENV NODE_ENV=production
+COPY package.json ./
+COPY bot ./bot
+COPY app/catalog.json ./app/catalog.json
+CMD ["node", "bot/worker.mjs"]

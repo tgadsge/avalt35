@@ -1,0 +1,28 @@
+{
+  "preparedAt": "2026-11-02",
+  "products": 846,
+  "frontendMatchesCurrentVersion": true,
+  "nodeTests": {
+    "passed": 16,
+    "failed": 0,
+    "checks": [
+      "cloud configuration and Origin protections",
+      "durable inquiries and private file boundaries",
+      "bot identity and webhook guards",
+      "atomic offset/outbox/session commit",
+      "single-volume lease",
+      "rate-limit retry and no resend of uncertain deliveries",
+      "This or that real catalog images and recommendation resume",
+      "private edit compare/share",
+      "confirmed pending concierge request",
+      "old panel edit fallback"
+    ]
+  },
+  "telegramMessagesSent": 0,
+  "livePhotosVerified": 849,
+  "webVersionPreviouslyDeployedByOwner": true,
+  "botHandlersConnectedToTelegram": false,
+  "thisRevisionDeployed": false,
+  "dockerBuildTested": false,
+  "begetUnchanged": true
+}
